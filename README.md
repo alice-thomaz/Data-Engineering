@@ -3,8 +3,8 @@
 Welcome to my Data Engineering Projects repository! This space hosts some projects related to data engineering, each developed to address specific challenges and enhance data processing capabilities.
 
 ## Projects
-- **Project 1: Project Name**
-  - Brief description of the project.
+- **Project 1: Coming soon**
+  - Coming soon.
 
 ## Getting Started
 1. Choose a project from the list above.
