@@ -13,4 +13,4 @@ Welcome to my Data Engineering Projects repository! This space hosts some projec
 
 ## Learn More
 - [LinkedIn](https://www.linkedin.com/in/alice-thomaz-b6b52b14a/): Connect with me on LinkedIn to stay updated on the latest developments, and feel free to contribute and provide feedback.
-- [Medium](https://medium.com/@alice.thomaz.): Explore detailed articles about each project on Medium. Gain insights into motivation, design decisions, and implementation details.
+- [Medium](https://medium.com/@alice_thomaz): Explore detailed articles about each project on Medium. Gain insights into motivation, design decisions, and implementation details.
