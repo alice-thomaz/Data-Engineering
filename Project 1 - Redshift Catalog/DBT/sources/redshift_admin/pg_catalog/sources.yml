@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: pg_catalog_sc
+    schema: pg_catalog
+    loader: Redshift
+
+    tables:
+      - name: svv_table_info
+      - name: pg_class_info
+      - name: pg_namespace
+      - name: svv_datashare_objects

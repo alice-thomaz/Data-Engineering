@@ -1,0 +1,5 @@
+version: 2
+
+macros:
+  - name: governance_update_catalog
+    description: Truncate the table and then start the procedure.

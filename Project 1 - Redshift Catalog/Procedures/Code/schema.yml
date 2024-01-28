@@ -1,0 +1,14 @@
+version: 2
+
+procedures:
+  - name: update_tb_pg_tables
+    description: Processes and inserts data from the Redshift system table - pg_tables.
+
+  - name: update_tb_pg_views
+    description: Processes and inserts data from the Redshift system table - pg_views.
+
+  - name: update_tb_svv_redshift_columns 
+    description: Processes and inserts data from the Redshift system table - svv_redshift_columns.
+
+  - name: update_tb_svv_redshift_tables
+    description: Processes and inserts data from the Redshift system table - svv_redshift_tables.
