@@ -32,7 +32,7 @@ models:
       - name: sti_unsorted
         description: Percentage of unsorted rows in the table.
       - name: sti_stats_off
-        description: Number indicating how outdated the table statistics are; 0 is up-to-date, 100 is outdated.
+        description: Number indicating how outdated the table statistics are - 0 is up-to-date, 100 is outdated.
       - name: sti_tbl_rows
         description: Total number of rows in the table. This value includes rows marked for deletion but not yet cleaned.
       - name: sti_skew_sortkey1
