@@ -1,7 +1,7 @@
 version: 2
 
 models: 
-  - name: dc_dbt_data_catalog
+  - name: dc_data_catalog
     description: Catalog table of datasets with metadata from Redshift.
     columns:
       - name: tsrt_database_name
