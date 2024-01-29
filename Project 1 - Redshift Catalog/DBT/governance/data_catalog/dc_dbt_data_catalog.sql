@@ -88,7 +88,7 @@ WITH svv_redshift_tables AS (       --Collects data from the svv_redshift_tables
     SPLIT_PART(sdo_object_name, '.', 1) AS dc_object_name_schema
   FROM {{ ref('pg_catalog_svv_datashare_objects_source') }}
 
-), catalogo AS (     --Final assembly of the catalog table combining Redshift data.
+), final_catalog AS (     --Final assembly of the catalog table combining Redshift data.
 
   SELECT
     tsrt_database_name,
@@ -133,4 +133,4 @@ WITH svv_redshift_tables AS (       --Collects data from the svv_redshift_tables
 
 )
 
-SELECT * FROM catalogo
+SELECT * FROM final_catalog
