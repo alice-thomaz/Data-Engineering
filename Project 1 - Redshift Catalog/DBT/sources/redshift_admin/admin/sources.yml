@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: admin_sc
+    schema: admin
+    loader: Redshift
+
+    tables:
+      - name: tb_pg_tables    
+      - name: tb_pg_views        
+      - name: tb_svv_redshift_columns      
+      - name: tb_svv_redshift_tables

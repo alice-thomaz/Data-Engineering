@@ -1,0 +1,87 @@
+version: 2
+
+models:
+  - name: pg_catalog_svv_table_info_source
+    description: A specific Redshift system table that provides detailed information about the tables present in the cluster.
+    columns:
+      - name: sti_database
+        description: Database name.
+      - name: sti_schema
+        description: Schema name.
+      - name: sti_table_id
+        description: Table ID.
+      - name: sti_table
+        description: Table name.
+      - name: sti_encoded
+        description: Value indicating if any column has defined encoding compression.
+      - name: sti_diststyle
+        description: Distribution style or distribution key column if the distribution key is defined.
+      - name: sti_sortkey1
+        description: First column in the sort key, if the sort key is defined.
+      - name: sti_max_varchar
+        description: Size of the largest column using the VARCHAR data type.
+      - name: sti_sortkey1_enc
+        description: >
+          Compression encoding of the first column in the sort key, if the sort key is defined.
+      - name: sti_sortkey_num
+        description: Number of columns defined as sort keys.
+      - name: sti_size
+        description: Size of the table, in 1 MB data blocks.
+      - name: sti_pct_used
+        description: Percentage of available space used by the table.
+      - name: sti_unsorted
+        description: Percentage of unsorted rows in the table.
+      - name: sti_stats_off
+        description: Number indicating how outdated the table statistics are - 0 is up-to-date, 100 is outdated.
+      - name: sti_tbl_rows
+        description: Total number of rows in the table. This value includes rows marked for deletion but not yet cleaned.
+      - name: sti_skew_sortkey1
+        description: >
+          Ratio between the size of the largest non-sort key column and the size of the first column of the sort key,
+          if the sort key is defined. Use this value to assess the effectiveness of the sort key.
+      - name: sti_skew_rows
+        description: Ratio between the number of rows in the slice with the most rows and the number of rows in the slice with the fewest rows.
+      - name: sti_estimated_visible_rows
+        description: Estimated rows in the table. This value does not include rows marked for deletion.
+      - name: sti_vacuum_sort_benefit
+        description: The maximum estimated percentage performance improvement of scan queries when you run vacuum sort.
+
+  - name: pg_catalog_pg_class_info_source
+    description: A Redshift system table that provides the creation date of tables present in the cluster.
+    columns:
+      - name: pci_reloid
+        description: Table ID.
+      - name: pci_relname
+        description: Table name.
+      - name: pci_relnamespace
+        description: Schema ID.
+      - name: pci_relcreationtime
+        description: Date and time of table creation.
+
+  - name: pg_catalog_pg_namespace_source
+    description: A Redshift system table that provides the ID and name of schemas present in the cluster.
+    columns:
+      - name: pn_oid
+        description: Schema ID.
+      - name: pn_nspname
+        description: Schema name.
+
+  - name: pg_catalog_svv_datashare_objects_source
+    description: A Redshift system table that provides datashares and their respective schemas and objects.
+    columns:
+      - name: sdo_share_type
+        description: Datashare type, whether it is outbound or inbound.
+      - name: sdo_share_name
+        description: Datashare name.
+      - name: sdo_object_type
+        description: The type of the specified object, such as schemas, tables, and views.
+      - name: sdo_object_name
+        description: Object name with the schema in front, for example - schema.view, schema.table.
+      - name: sdo_producer_account
+        description: Producer account ID that shared the data.
+      - name: sdo_producer_namespace
+        description: Unique identifier of the producer cluster sharing data.
+      - name: sdo_include_new
+        description: >
+          The property that specifies whether any future-created tables, views, or UDFs in the specified schema should be added to the datashare.
+          This parameter is only relevant for OUTBOUND datashares and only for schema types in the datashare.

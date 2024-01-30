@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: admin_tb_pg_tables_source
+    description: A system table that stores information about the tables present in the database.
+    columns:
+      - name: tpt_schemaname
+        description: Name of the schema containing the table.
+      - name: tpt_tablename
+        description: Table name.
+      - name: tpt_tableowner
+        description: Table owner's name.
+
+  - name: admin_tb_pg_views_source
+    description: A system table that stores information about the views present in the database.
+    columns:
+      - name: tpv_schemaname
+        description: Name of the schema containing the view.
+      - name: tpv_viewname
+        description: View name.
+      - name: tpv_viewowner
+        description: View owner's name.
+
+  - name: admin_tb_svv_redshift_columns_source
+    description: A system table listing all available columns in the database.
+    columns:
+      - name: tsrc_database_name
+        description: The name of the database where the table containing the columns exists.
+      - name: tsrc_schema_name
+        description: The schema name of the table.
+      - name: tsrc_table_name
+        description: The table name.
+      - name: tsrc_column_name
+        description: The name of a column.
+      - name: tsrc_ordinal_position
+        description: The position of the column in the table.
+      - name: tsrc_data_type
+        description: The data type of the column.
+      - name: tsrc_is_nullable
+        description: A value that defines if a column is nullable.
+      - name: tsrc_encoding
+        description: The encoding type of the column.
+      - name: tsrc_distkey
+        description: A value that is true if this column is the distribution key for the table and false otherwise.
+      - name: tsrc_sortkey
+        description: A value that specifies the order of the column in the sort key.
+      - name: tsrc_remarks
+        description: Documentation of the column.
+
+  - name: admin_tb_svv_redshift_tables_source
+    description: A system table listing all available tables in the database.
+    columns:
+      - name: tsrt_database_name
+        description: The name of the database where the specified table exists.
+      - name: tsrt_schema_name
+        description: The schema name for the table.
+      - name: tsrt_table_name
+        description: The table name.
+      - name: tsrt_table_type
+        description: The table type. Possible values are views and tables.
+      - name: tsrt_remarks
+        description: Documentation of the table.

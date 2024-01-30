@@ -1,0 +1,54 @@
+version: 2
+
+models: 
+  - name: dc_data_catalog
+    description: Catalog table of datasets with metadata from Redshift.
+    columns:
+      - name: tsrt_database_name
+        description: The name of the database where the table exists.
+      - name: tsrt_schema_name
+        description: The name of the table's schema.
+      - name: tsrt_table_name
+        description: The name of the table.
+      - name: tsrt_table_description
+        description: The description of the table.
+      - name: tsrt_table_type
+        description: The table type. Possible values are views and tables.
+      - name: sti_table_diststyle
+        description: Distribution style or distribution key column, if distribution key is defined.
+      - name: sti_table_sortkey
+        description: First column in the sort key, if the sort key is defined.
+      - name: sti_table_unsorted
+        description: Percentage of unsorted rows in the table.
+      - name: sti_table_qnt_rows
+        description: Total number of rows in the table. This value includes rows marked for deletion but not yet cleaned.
+      - name: sti_table_size
+        description: Table size, in 1 MB data blocks.
+      - name: pci_table_creation_time
+        description: Date and time of table creation.
+      - name: dc_table_owner
+        description: Name of the table owner.
+      - name: tsrc_column_name
+        description: The column name.
+      - name: tsrc_column_description
+        description: The column description.
+      - name: tsrc_column_ordinal_position
+        description: The column position in the table.
+      - name: tsrc_column_data_type
+        description: The data type of the column.
+      - name: dc_column_is_nullable
+        description: A value that defines whether a column is nullable.
+      - name: tsrc_column_encoding
+        description: The encoding type of the column.
+      - name: pdc_column_distkey
+        description: A value that is true if this column is the distribution key for the table, and false otherwise.
+      - name: pdc_column_sortkey
+        description: A value that specifies the order of the column in the sort key.
+      - name: sdo_share_type
+        description: The type of datashare - outbound or inbound.
+      - name: sdo_share_name
+        description: Datashare name.
+      - name: sdo_object_type
+        description: The type of the object, such as schema or table.
+      - name: dc_manifest_last_update
+        description: Date of the last update of manifest.json.
